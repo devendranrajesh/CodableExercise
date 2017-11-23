@@ -9,6 +9,15 @@ import Foundation
 
 class HomeParser {
     func parseHome() {
+
+        let jsonDecoder = JSONDecoder()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "MM/dd/yyyy"
+        jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
+
+        let jsonEncoder = JSONEncoder()
+        jsonEncoder.dateEncodingStrategy = .iso8601
+
         let home = Home(people: [Person(name: "aaa", address: "bbb"), Person(name: "aaa1", address: "bbb1")], room: Room(direction: 2, name: "Living Room", wall: Wall(color: 10, width: 20)), car: true, buildDate: Date(), time: Time(hour: Hour(minute: 100)), style: .apartment, url: URL(string: "http://www.google.com")!)
 
         if let encodedHomeObject = try? JSONEncoder().encode(home) {
@@ -17,21 +26,25 @@ class HomeParser {
             if let decodedHomeObject = try? JSONDecoder().decode(Home.self, from: encodedHomeObject) {
                 print(decodedHomeObject)
             }
+        } else {
+            print("asds")
         }
 
         let homeJSON = """
-        {"family": [{"name": "aaa", "address": "bbb"}, {"name": "aaa1", "address": "bbb1"}], "room": {"room_direction": 2, "name": "Living Room", "wall": {"color": 10, "width": 20}}, "build_date": "10/29/2017", "time": {"hour": {"minute": 900 }}, "home_style": "apartment", "home_url": "http://www.google.com"}
+        {"family": [{"name": "aaa", "address": "bbb"}, {"name": "aaa1", "address": "bbb1"}], "room": {"room_direction": 2, "name": "Living Room", "wall": {"color": 10, "width": 20}}, "build_date": "10/29/2017", "time": {"hour": {"minute": 900 }}, "home_style": "apartment", "home_url": "htwww.google.com"}
         """
 
-        if let decodedHomeObject = try? JSONDecoder().decode(Home.self, from: homeJSON.data(using: .utf8)!) {
+        if let decodedHomeObject = try? jsonDecoder.decode(Home.self, from: homeJSON.data(using: .utf8)!) {
             print(decodedHomeObject)
-            if let encodedHomeObject = try? JSONEncoder().encode(decodedHomeObject) {
+            if let encodedHomeObject = try? jsonEncoder.encode(decodedHomeObject) {
                 print(String(data: encodedHomeObject,encoding: .utf8)!)
             }
+        } else {
+            print("Error Occurred")
         }
 
         do {
-            let decodedHomeObject = try JSONDecoder().decode(Home.self, from: homeJSON.data(using: .utf8)!)
+            let decodedHomeObject = try jsonDecoder.decode(Home.self, from: homeJSON.data(using: .utf8)!)
             print(decodedHomeObject)
         } catch let error {
             print(error.localizedDescription)

@@ -9,7 +9,7 @@ import Foundation
 
 class ComplexJSONParser {
     func parseComplexJSON() {
-        let quickbrowseCategories = JSONFileReader.readJSONFile(with: "quickbrowse")
+        let quickbrowseCategories = JSONFileReader.readAndParseObjectsFromJSONFile(with: "quickbrowse")
         print(quickbrowseCategories)
     }
 }

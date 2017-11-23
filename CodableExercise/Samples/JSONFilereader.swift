@@ -8,7 +8,7 @@
 import Foundation
 
 class JSONFileReader: NSObject {
-    static func readJSONFile(with name: String) -> Decodable? {
+    static func readAndParseObjectsFromJSONFile(with name: String) -> Decodable? {
         guard let path = Bundle.main.path(forResource: name, ofType: "json") else { return nil }
         do {
             let jsonData = try NSData(contentsOfFile: path, options: NSData.ReadingOptions.mappedIfSafe) as Data
