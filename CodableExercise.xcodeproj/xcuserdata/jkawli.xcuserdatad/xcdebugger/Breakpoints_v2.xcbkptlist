@@ -74,7 +74,7 @@
                   moduleName = "CodableExercise"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jkawli/Desktop/CodableExercise/CodableExercise/Parsers/HomeParser.swift"
-                  timestampString = "533165625.319568"
+                  timestampString = "533270634.529077"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -89,7 +89,7 @@
                   moduleName = "CodableExercise"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jkawli/Desktop/CodableExercise/CodableExercise/Parsers/HomeParser.swift"
-                  timestampString = "533165625.322698"
+                  timestampString = "533270634.532801"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -104,7 +104,7 @@
                   moduleName = "CodableExercise"
                   usesParentBreakpointCondition = "Yes"
                   urlString = "file:///Users/jkawli/Desktop/CodableExercise/CodableExercise/Parsers/HomeParser.swift"
-                  timestampString = "533165625.325289"
+                  timestampString = "533270634.536762"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "49"
@@ -216,22 +216,6 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "CodableExercise/Parsers/ComplexJSONParser.swift"
-            timestampString = "533165625.242464"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "14"
-            endingLineNumber = "14"
-            landmarkName = "parseComplexJSON()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
             filePath = "CodableExercise/Parsers/FlatteningParser.swift"
             timestampString = "533165625.242512"
             startingColumnNumber = "9223372036854775807"
@@ -303,6 +287,22 @@
             startingLineNumber = "28"
             endingLineNumber = "28"
             landmarkName = "parseHome()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CodableExercise/Parsers/ComplexJSONParser.swift"
+            timestampString = "533270633.974337"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "13"
+            endingLineNumber = "13"
+            landmarkName = "parseComplexJSON()"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

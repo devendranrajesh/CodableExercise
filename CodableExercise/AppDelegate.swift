@@ -16,12 +16,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Parsing complex JSON
         ComplexJSONParser().parseComplexJSON()
-        DictionaryParser().parseDictionary()
-        ArrayParser().parseArray()
-        CompanyParser().parseCompany()
-        HomeParser().parseHome()
-        BeerParser().parseBeers()
-        FlatteningParser().flatteningParser()
+//        DictionaryParser().parseDictionary()
+//        ArrayParser().parseArray()
+//        CompanyParser().parseCompany()
+//        HomeParser().parseHome()
+//        BeerParser().parseBeers()
+//        FlatteningParser().flatteningParser()
         return true
     }
 
